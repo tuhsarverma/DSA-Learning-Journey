@@ -1,4 +1,4 @@
-#include <iostream>
+.cpp#include <iostream>
 using namespace std;
 
 #pragma pack(1)   // TO TURN OFF PADDING
