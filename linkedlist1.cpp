@@ -2,6 +2,7 @@
 using namespace std;
 class node{
     public:
+    
     int data;
     node* next;
     node(int D){
@@ -9,15 +10,16 @@ class node{
         this->next=NULL;
     }
 };
-void insertathead(node* &head,int D){
-    node* node1=new node(D);
-    node* temp=node1;
-    head=temp;
+void insertattail(node* &tail,int D){
+    node* temp=new node(D);
+    tail->next=temp;
+    tail=tail->next;
+    
 }
 void print(node* &head){
     node* temp=head;
     while(temp!=NULL){
-        cout<<temp->data<<endl;
+        cout<<temp->data<<" ";
         temp=temp->next;
     }
 }
@@ -25,7 +27,10 @@ int main (){
     int P=12;
     node* node1=new node(P);
     cout<<node1->data<<endl;
-    cout<<node1->next;
+    node* head=node1;
+    node* tail=node1;
+    insertattail(tail,10);
+    print(head);
 
     return 0;
 }
