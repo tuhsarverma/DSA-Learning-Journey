@@ -17,7 +17,7 @@ int main(){
     cout << s.capacity()<<endl;
     cout<<s.compare("hehe");
     char arr[20];
-    s.copy(arr,4,0);// copies string into a char arr
+    s.copy(arr,4,1);// copies string into a char arr
     arr[4]='\0';
     cout<<arr<<endl;
     s.erase(2,6);

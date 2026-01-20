@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    vector<int> nums = {1,2,1,2,1};
+    vector<int> nums = {3,3,4,3,2,2,2,2};
 
     int candidate = 0;
     int count = 0;
