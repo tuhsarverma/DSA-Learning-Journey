@@ -26,7 +26,6 @@ int main() {
         cin>>arr[i];
     }
     BUBBLESORT(arr,n);
-    
     cout<<"PRINTING IN MAINS";
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";

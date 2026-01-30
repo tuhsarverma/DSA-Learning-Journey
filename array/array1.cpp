@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-permutationinstring
 bool ispermutationofanotherstring(string s,string v){
     int a[26]={0},b[26]={0};
     for(int i=0;i<s.length();i++){
