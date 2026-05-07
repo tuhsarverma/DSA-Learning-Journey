@@ -12,7 +12,7 @@ class node{
     }
     ~node(){
         int value=this->data;
-        if(this->next==NULL){
+        if(this->next!=NULL){
             delete next;
             this->next=NULL;
         }
@@ -28,6 +28,7 @@ void insertattail(node* &tail,int d){//INSERTATTIAL
     node* temp=new node(d);
     tail->next=temp;
     tail=temp;
+    tail->next=NULL;
 }
 void insertatposition(node* &tail,node* &head,int pos,int d){
     if(pos==1){
@@ -57,24 +58,26 @@ void print(node* &head){
     cout<<endl;
 }
 void deleteatposition(node* &tail,int pos,node* &head){
-     if(pos==1){
+    if(pos==1){
         node* temp=head;
-        head=head->next;
+        head=temp->next;
         temp->next=NULL;
         delete temp;
+        
     }
     else{
-        int cnt=1;
-        node* curr=head;
         node* prev=NULL;
+        node* curr=head;
+        int cnt=1;
         while(cnt<pos){
+            cnt++;
             prev=curr;
             curr=curr->next;
-            cnt++;
         }
         prev->next=curr->next;
-        curr->next=NULL;
-        delete curr;
+        curr->next=NULL;  
+        delete curr;     
+
     }
 }
 int main (){
