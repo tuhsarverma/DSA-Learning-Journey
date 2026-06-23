@@ -7,7 +7,6 @@ int main() {
 
     int candidate = 0;
     int count = 0;
-
     // Phase 1: Find candidate
     for (int x : nums) {
         if (count == 0) {
@@ -18,7 +17,7 @@ int main() {
 
     // Phase 2: Verify candidate (important!)
     count = 0;
-    for (int x : nums) {
+    for (int x : nums) { 
         if (x == candidate)
             count++;
     }
@@ -29,4 +28,5 @@ int main() {
         cout << "No majority element";
 
     return 0;
-}
+}  
+

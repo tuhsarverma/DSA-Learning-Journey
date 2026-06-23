@@ -1,4 +1,4 @@
-.cpp#include <iostream>
+#include <iostream>
 using namespace std;
 
 #pragma pack(1)   // TO TURN OFF PADDING
@@ -11,7 +11,7 @@ public:
     }
 };
 
-#pragma pack()    // TO TURN ON PADDING
+#pragma pack()    // TO TURN ON PADsfDING
 class K {
 public:
     int health;
@@ -52,3 +52,4 @@ int main() {
     cout<<endl <<"HELLO";
     return 0;
 }
+

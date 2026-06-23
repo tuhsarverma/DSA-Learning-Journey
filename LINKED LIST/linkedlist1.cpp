@@ -101,4 +101,4 @@ int main (){
      deleteatposition(tail,5,head);
     print(head);
     return 0;
-}
+}/

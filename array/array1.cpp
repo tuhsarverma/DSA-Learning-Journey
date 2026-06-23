@@ -77,7 +77,7 @@ void swapname(char arr[],int size){
 }
 int main(){
     char name[]="BABBAR IS GABBAR";
-    cout<<name<<endl;;
+    cout<<name<<endl;
     swapname(name,6);
     cout<<"swapped name is "<<name;
     checkpalindrome("babbab",6)?cout<<"\nname is palindrome"<<endl:cout<<"\nname is not palindrome"<<endl;

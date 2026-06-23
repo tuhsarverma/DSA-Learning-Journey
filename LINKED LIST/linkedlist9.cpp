@@ -1,3 +1,44 @@
+#include <iostream>
+using namespace std;
+class node{
+    public:
+    int data;
+    node* next;
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+};
+node* reverse(node* head){
+    node* curr=head;
+    node* prev=NULL;
+    node* next=NULL;
+    while(curr!=NULL){
+        next=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=next;
+    }
+    return prev;
+}
+void print(node* head){
+    node* temp=head;
+    while(temp!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+    cout<<endl;
+}
+node* insertatnode(node* &head,int data){
+    node* temp=new node(data);
+    if(head==NULL){
+        head=temp;
+    }
+    else{
+        temp->next=head;
+        head=temp;
+    }
+}
 int solveadd(node* head1,node* head2){
     node* temp1=head1;
     node* temp2=head2;
@@ -74,7 +115,7 @@ node* add(node* first,node* second){
         }
         int sum=val1+val2+carry;
         int digit=sum%10;
-        insertatatil(first,second,digit);
+        insertattail(anshead,anstail,digit);
         carry=sum/10;
         if(first!=NULL){
             first=first->next;
