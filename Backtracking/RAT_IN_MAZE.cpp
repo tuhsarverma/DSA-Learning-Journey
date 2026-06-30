@@ -16,12 +16,9 @@ void solve(vector<vector<int>> m, int n, vector<string> &ans, int x, int y,
     if (x == n - 1 && y == n - 1) {   // reached destination
         ans.push_back(path);
         return;
-    }
-
+    } 
     visited[x][y] = 1;
-
     int newx, newy;
-
     // D
     newx = x + 1; newy = y;
     if (issafe(newx, newy, n, m, visited)) {
@@ -29,7 +26,6 @@ void solve(vector<vector<int>> m, int n, vector<string> &ans, int x, int y,
         solve(m, n, ans, newx, newy, visited, path);
         path.pop_back();
     }
-
     // L
     newx = x; newy = y - 1;
     if (issafe(newx, newy, n, m, visited)) {
@@ -37,7 +33,6 @@ void solve(vector<vector<int>> m, int n, vector<string> &ans, int x, int y,
         solve(m, n, ans, newx, newy, visited, path);
         path.pop_back();
     }
-
     // U
     newx = x - 1; newy = y;
     if (issafe(newx, newy, n, m, visited)) {
